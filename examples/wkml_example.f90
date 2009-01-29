@@ -8,7 +8,7 @@ program wkml_example
   type(xmlf_t) :: myfile
 
   integer i,m
-  parameter(m=14535) 
+  parameter(m=10) 
 
   double precision :: latitude(m), longitude(m)  
 
