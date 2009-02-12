@@ -1,0 +1,2296 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=big5">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="WKML05122008.files/filelist.xml">
+<link rel=Edit-Time-Data href="WKML05122008.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>This describes the WKML API intended for release</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="country-region"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="chsdate"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="chmetcnv"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>SuperXP</o:Author>
+  <o:LastAuthor>SuperXP</o:LastAuthor>
+  <o:Revision>4</o:Revision>
+  <o:TotalTime>177</o:TotalTime>
+  <o:Created>2008-12-09T21:31:00Z</o:Created>
+  <o:LastSaved>2008-12-09T21:32:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>4062</o:Words>
+  <o:Characters>23156</o:Characters>
+  <o:Company>CMT</o:Company>
+  <o:Lines>192</o:Lines>
+  <o:Paragraphs>54</o:Paragraphs>
+  <o:CharactersWithSpaces>27164</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:新細明體;
+	panose-1:2 2 3 0 0 0 0 0 0 0;
+	mso-font-alt:PMingLiU;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:3 137232384 22 0 1048577 0;}
+@font-face
+	{font-family:細明體;
+	panose-1:2 2 3 9 0 0 0 0 0 0;
+	mso-font-alt:MingLiU;
+	mso-font-charset:136;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:3 137232384 22 0 1048577 0;}
+@font-face
+	{font-family:"\@細明體";
+	panose-1:2 2 3 9 0 0 0 0 0 0;
+	mso-font-charset:136;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:3 137232384 22 0 1048577 0;}
+@font-face
+	{font-family:"\@新細明體";
+	panose-1:2 2 3 0 0 0 0 0 0 0;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:3 137232384 22 0 1048577 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:新細明體;
+	mso-font-kerning:1.0pt;}
+h1
+	{mso-style-next:內文;
+	margin-top:9.0pt;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:0cm;
+	line-height:300%;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:26.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:26.0pt;
+	font-weight:bold;}
+h2
+	{mso-style-next:內文;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:300%;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:24.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;
+	font-weight:bold;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-noshow:yes;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	layout-grid-mode:char;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:新細明體;
+	mso-font-kerning:1.0pt;}
+span.MsoFootnoteReference
+	{mso-style-noshow:yes;
+	vertical-align:super;}
+a:link, span.MsoHyperlink
+	{color:#BB0000;
+	mso-text-animation:none;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:新細明體;
+	mso-bidi-font-family:新細明體;}
+tt
+	{mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:細明體;
+	mso-ascii-font-family:細明體;
+	mso-fareast-font-family:細明體;
+	mso-hansi-font-family:細明體;
+	mso-bidi-font-family:細明體;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;
+	mso-footnote-separator:url("WKML05122008.files/header.htm") fs;
+	mso-footnote-continuation-separator:url("WKML05122008.files/header.htm") fcs;
+	mso-endnote-separator:url("WKML05122008.files/header.htm") es;
+	mso-endnote-continuation-separator:url("WKML05122008.files/header.htm") ecs;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:78066716;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1655903920 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:107815099;
+	mso-list-template-ids:-860040496;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:�h;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:270213619;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-970182880 67698689 67698689 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l3
+	{mso-list-id:279072995;
+	mso-list-template-ids:-943281022;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:�h;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:320819531;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2047724280 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l5
+	{mso-list-id:374932275;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1129680390 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l6
+	{mso-list-id:412052367;
+	mso-list-type:hybrid;
+	mso-list-template-ids:530620788 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l7
+	{mso-list-id:605388002;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1873355104 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l8
+	{mso-list-id:807363769;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1725118784 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l8:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l9
+	{mso-list-id:867450343;
+	mso-list-template-ids:759874480;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:�h;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l10
+	{mso-list-id:910624242;
+	mso-list-template-ids:-1452475110;}
+@list l10:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:�h;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l11
+	{mso-list-id:940262724;
+	mso-list-template-ids:726589054;}
+@list l11:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:�h;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l12
+	{mso-list-id:992217164;
+	mso-list-template-ids:-192366198;}
+@list l12:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:�h;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l13
+	{mso-list-id:1049719107;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1338748624 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l13:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l14
+	{mso-list-id:1185442697;
+	mso-list-template-ids:1907027010;}
+@list l14:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:�h;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l15
+	{mso-list-id:1374189022;
+	mso-list-type:hybrid;
+	mso-list-template-ids:151651274 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l15:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l16
+	{mso-list-id:1415517106;
+	mso-list-type:hybrid;
+	mso-list-template-ids:371900600 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l16:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l17
+	{mso-list-id:1492409210;
+	mso-list-template-ids:1092675884;}
+@list l17:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:�h;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l18
+	{mso-list-id:1668481254;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1698215348 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l18:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l19
+	{mso-list-id:1704556418;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1304353046 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l19:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l20
+	{mso-list-id:1732265698;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1123825012 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l20:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l21
+	{mso-list-id:1767995484;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1508257246 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l21:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l22
+	{mso-list-id:1958676296;
+	mso-list-template-ids:551831144;}
+@list l22:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:�h;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l23
+	{mso-list-id:1999722190;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1477518098 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l23:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+@list l24
+	{mso-list-id:2017346511;
+	mso-list-template-ids:832728494;}
+@list l24:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:�h;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l25
+	{mso-list-id:2123257537;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1016985650 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l25:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:��;
+	mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:表格內文;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+table.MsoTableGrid
+	{mso-style-name:表格格線;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=ZH-TW link="#BB0000" vlink=purple style='tab-interval:24.0pt;
+text-justify-trim:punctuation'>
+
+<div class=Section1 style='layout-grid:18.0pt'>
+
+<h1><span lang=EN-US style='mso-font-kerning:18.0pt'>WKML: a Fortran library
+for producing <a href="http://code.google.com/apis/kml/documentation/"
+title="external link to http://code.google.com/apis/kml/documentation/"><span
+style='color:windowtext'>KML</span></a> output.<o:p></o:p></span></h1>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-pagination:widow-orphan'><span lang=EN-US style='font-family:新細明體;
+mso-bidi-font-family:新細明體;mso-font-kerning:0pt'>WKML is an output module built
+on top of <a href="http://uszla.me.uk/space/software/FoX/"
+title="external link to http://uszla.me.uk/space/software/FoX/"><u><span
+style='color:blue'>FoX</span></u></a>, expressly designed to aid the outputting
+of KML from Fortran – in order to allow the easy visualization of geospatial
+data as produced by Fortran programs.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-pagination:widow-orphan'><span lang=EN-US style='font-family:新細明體;
+mso-bidi-font-family:新細明體;mso-font-kerning:0pt'>Go straight to<a
+href="http://source.uszla.me.uk/FoX/wkml"
+title="external link to http://source.uszla.me.uk/FoX/wkml"><u><span
+style='color:blue'> download</span></u></a>. (Note that this version is a
+pre-release version, with several known bugs)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-pagination:widow-orphan'><span lang=EN-US style='font-family:新細明體;
+mso-bidi-font-family:新細明體;mso-font-kerning:0pt'>Many commonly used scientific
+programs in the geospatial domain are written in Fortran; and many
+geoscientists are most comfortable programming in Fortran. Visualizing data in
+Google Earth requires the use of KML, which is unfamiliar to many traditional
+geoscientists, and for which there are no existing Fortran interfaces.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-pagination:widow-orphan'><span lang=EN-US style='font-family:新細明體;
+mso-bidi-font-family:新細明體;mso-font-kerning:0pt'>WKML brings the power of Google
+Earth to within the grasp of the Fortran-literate scientist, and enables
+existing Fortran codes to output data to Google earth with only trivial amounts
+of effort.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-pagination:widow-orphan'><span lang=EN-US style='font-family:新細明體;
+mso-bidi-font-family:新細明體;mso-font-kerning:0pt'>We have already successfully
+used WKML to generate visualizations in multiple scientific domains:<o:p></o:p></span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-pagination:widow-orphan;mso-list:l24 level1 lfo1;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:新細明體;mso-bidi-font-family:新細明體;mso-font-kerning:
+     0pt'>Glaciology, using <a href="http://glimmer.forge.nesc.ac.uk/"
+     title="external link to http://glimmer.forge.nesc.ac.uk/"><span
+     style='color:windowtext'>GLIMMER</span></a> – inspecting the
+     three-dimensional form of a predicted ice-sheet. <o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal align=center style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:center;mso-pagination:widow-orphan'><span lang=EN-US
+style='font-family:新細明體;mso-bidi-font-family:新細明體;mso-font-kerning:0pt'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1028" type="#_x0000_t75" alt="" style='width:423pt;
+ height:304.5pt'>
+ <v:imagedata src="WKML05122008.files/image001.jpg" o:href="uszla_me_uk%20-%20WKML.files/glimmer-kml.jpg"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=564 height=406
+src="WKML05122008.files/image012.jpg" v:shapes="_x0000_i1028"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:center;mso-pagination:widow-orphan'><span lang=EN-US
+style='font-family:新細明體;mso-bidi-font-family:新細明體;mso-font-kerning:0pt'><a
+href="http://www.uszla.me.uk/images/wkml/glim.kml"
+title="external link to http://www.uszla.me.uk/images/wkml/glim.kml"><u><span
+style='color:blue'>glim.kml</span></u></a><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-pagination:widow-orphan'><span lang=EN-US style='font-family:新細明體;
+mso-bidi-font-family:新細明體;mso-font-kerning:0pt'>The KML depicts the calculated
+form of an ice sheet over <st1:place w:st="on">Greenland</st1:place>. The
+height is magnified by fifty times to make it more visible; and in addition
+colour is used to highlight the variation in height.<o:p></o:p></span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-pagination:widow-orphan;mso-list:l1 level1 lfo2;tab-stops:list 36.0pt'><span
+     lang=EN-US style='font-family:新細明體;mso-bidi-font-family:新細明體;mso-font-kerning:
+     0pt'>Seismology – using <a
+     href="http://www.ldeo.columbia.edu/~felixw/hypoDD.html"
+     title="external link to http://www.ldeo.columbia.edu/~felixw/hypoDD.html"><u><span
+     style='color:blue'>hypoDD</span></u></a> – refining estimates of
+     earthquake epicentres. <o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal align=center style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:center;mso-pagination:widow-orphan'><span lang=EN-US
+style='font-family:新細明體;mso-bidi-font-family:新細明體;mso-font-kerning:0pt'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" alt="" style='width:405pt;height:293.25pt'>
+ <v:imagedata src="WKML05122008.files/image003.jpg" o:href="uszla_me_uk%20-%20WKML.files/hypoDD-kml.jpg"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=540 height=391
+src="WKML05122008.files/image013.jpg" v:shapes="_x0000_i1027"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:center;mso-pagination:widow-orphan'><span lang=EN-US
+style='font-family:新細明體;mso-bidi-font-family:新細明體;mso-font-kerning:0pt'><a
+href="http://www.uszla.me.uk/images/wkml/hypoDD.kml"
+title="external link to http://www.uszla.me.uk/images/wkml/hypoDD.kml"><u><span
+style='color:blue'>hypoDD.kml</span></u></a><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-pagination:widow-orphan'><span lang=EN-US style='font-family:新細明體;
+mso-bidi-font-family:新細明體;mso-font-kerning:0pt'>This illustrates two datasets;
+initial and final estimates of the epicentres of a group of seismic events; the
+blue-black placemarks are initial, and red represent final estimates. The size
+of the placemarks represent the magnitude of the earthquake.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-pagination:widow-orphan;mso-outline-level:3'><b><span lang=EN-US
+style='font-size:13.5pt;font-family:新細明體;mso-bidi-font-family:新細明體;mso-font-kerning:
+0pt'>Download/Documentation<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-pagination:widow-orphan'><span lang=EN-US style='font-family:新細明體;
+mso-bidi-font-family:新細明體;mso-font-kerning:0pt'>The current release-candidate
+of WKML may be downloaded from <a href="http://source.uszla.me.uk/FoX/wkml"
+title="external link to http://source.uszla.me.uk/FoX/wkml"><u><span
+style='color:blue'>http://source.uszla.me.uk/FoX/wkml</span></u></a>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-pagination:widow-orphan'><span lang=EN-US style='font-family:新細明體;
+mso-bidi-font-family:新細明體;mso-font-kerning:0pt'>Full documentation on the API
+may be found at <a href="http://cete.niees.group.cam.ac.uk/WKML/WkmlApi"
+title="external link to http://www.uszla.me.uk/trac/FoX/wiki/WkmlApi"><u><span
+style='color:blue'>http://cete.niees.group.cam.ac.uk/WKML/WkmlApi</span></u></a>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-pagination:widow-orphan;mso-outline-level:3'><b><span lang=EN-US
+style='font-size:13.5pt;font-family:新細明體;mso-bidi-font-family:新細明體;mso-font-kerning:
+0pt'>License<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-pagination:widow-orphan'><span lang=EN-US style='font-family:新細明體;
+mso-bidi-font-family:新細明體;mso-font-kerning:0pt'>WKML is licensed under a
+3-clause BSD license; which is to say that it may be used freely by any and all
+users; redistributed in source or binary form; provided always that the
+copyright notices are maintained. This is the <a
+href="http://www.uszla.me.uk/FoX/DoX/Licensing.html"
+title="external link to http://www.uszla.me.uk/FoX/DoX/Licensing.html"><u><span
+style='color:blue'>full license text</span></u></a>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-pagination:widow-orphan;mso-outline-level:3'><b><span lang=EN-US
+style='font-size:13.5pt;font-family:新細明體;mso-bidi-font-family:新細明體;mso-font-kerning:
+0pt'>Further details / help<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-pagination:widow-orphan'><span lang=EN-US style='font-family:新細明體;
+mso-bidi-font-family:新細明體;mso-font-kerning:0pt'>For further details, please
+contact the authors, <a href="mailto:gtc25@cam.ac.uk"
+title="e-mail to mailto:gtc25@cam.ac.uk"><u><span style='color:blue'>Gen-Tao
+Chiang</span></u></a> and <a href="mailto:tow@uszla.me.uk"
+title="e-mail to mailto:tow@uszla.me.uk"><u><span style='color:blue'>Toby White</span></u></a><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-pagination:widow-orphan'><span lang=EN-US
+style='font-family:新細明體;mso-bidi-font-family:新細明體;mso-font-kerning:0pt'>Indexing
+in progress, cross-references will be refreshed soon.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<h2><span lang=EN-US>WKML API</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>This describes the WKML API intended for
+release. All of this API was implemented as of <st1:chsdate Year="2005"
+Month="9" Day="7" IsLunarDate="False" IsROCDate="False" w:st="on">5/9/7</st1:chsdate>.</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>The WKML homepage may be found at either
+of:</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;</span>http://cete.niees.group.ca.ac.uk/WKML/</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>&nbsp;</span>http://uszla.me.uk/space/software/FoX/wkml/</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>The API is divided here into five parts:</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=227 valign=top style='width:170.6pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US><a href="#_WKML_API:_General">WkmlApiGeneral</a></span></p>
+  </td>
+  <td width=432 valign=top style='width:324.0pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>general functions (opening &amp; closing
+  files, etc.)</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=227 valign=top style='width:170.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US><a href="#_WKML_API:_Geometry">WkmlApiGeometry</a></span></p>
+  </td>
+  <td width=432 valign=top style='width:324.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>functions for creating geometrical
+  objects (points, lines, and polygons)</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=227 valign=top style='width:170.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US><a href="#_WKML_API:_2-D">WkmlApiTwoDimensionalFields</a></span></p>
+  </td>
+  <td width=432 valign=top style='width:324.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>functions for visualizing 2D fields of
+  data</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=227 valign=top style='width:170.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US><a href="#_WKML_API:_Colour">WkmlApiColourHandling</a></span></p>
+  </td>
+  <td width=432 valign=top style='width:324.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>functions for manipulating the colours of
+  objects</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=227 valign=top style='width:170.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US><a href="#_WKML_API:_Styling">WkmlApiStyling</a></span></p>
+  </td>
+  <td width=432 valign=top style='width:324.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>functions for manipulating the styles of
+  objects</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+  <td width=227 valign=top style='width:170.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US><a href="#_WKMLChart">WkmlChart</a></span></p>
+  </td>
+  <td width=432 valign=top style='width:324.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>Function for adding chart</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>some examples of usage are shown below:</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>a very simple program that does
+nothing except place a single point at (0,0)</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:rect id="_x0000_s1028" style='position:absolute;
+ margin-left:-5.25pt;margin-top:0;width:414pt;height:130.5pt;z-index:1'
+ fillcolor="silver">
+ <v:fill opacity="13107f"/>
+</v:rect><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:1'><span style='position:absolute;left:-8px;top:-1px;
+width:554px;height:176px'><img width=554 height=176
+src="WKML05122008.files/image005.gif" v:shapes="_x0000_s1028"></span></span><![endif]><span
+lang=EN-US style='font-size:9.0pt'>program<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt'>use FoX_wkml<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt'>type(xmlf_t) :: kf
+! This is the file handle<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt'>call
+kmlBeginFile(kf, filename=&quot;output.kml&quot;, docname=&quot;Some example
+output&quot;)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt'>call
+kmlCreatePoints(kf, 0.0, 0.0)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt'>call kmlEndFile(kf)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt'>end program<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>an example of a subroutine that
+might be called every step to output a line. It takes as arguments the x &amp;
+y values of the points, and a step number. When the step number is zero, the
+file is opened, then every step outputs a thick red line joining up the points,
+which is named with the step number. Finally, when step is -1, the file is
+closed.</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:rect id="_x0000_s1029" style='position:absolute;
+ margin-left:-9pt;margin-top:0;width:414pt;height:153pt;z-index:2' fillcolor="silver">
+ <v:fill opacity="13107f"/>
+</v:rect><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:2'><span style='position:absolute;left:-13px;top:-1px;
+width:554px;height:206px'><img width=554 height=206
+src="WKML05122008.files/image006.gif" v:shapes="_x0000_s1029"></span></span><![endif]><span
+lang=EN-US style='font-size:9.0pt'>subroutine output_kml(x, y, step)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>double precision :: x(:), y(:)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>integer :: step<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>if (step==0) call kmlBeginFile(kf,
+&quot;lines.kml&quot;)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>call kmlCreateLine(kf,
+longitude=x, latitude=y, color=&quot;red&quot;, width=5, name=str(step))<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>if (step=-1) call kmlEndFile(kf)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>end subroutine</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_WKML_API:_General"></a><span lang=EN-US>WKML API: General
+functions</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>This is part of the WkmlApi documentation,
+and describes some of the API provided by WKML. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>General background<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>An opaque object, of type xmlf_t, is used
+as a file-handle for all WKML operations - it is analogous to the unit number
+for a normal Fortran output file. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>All WKML API calls require their first
+argument to be the file handle of an open KML file. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>File handling<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New"'>kmlBeginFile
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>! This opens a new KML file. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l2 level1 lfo3;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) :: filename -
+the name of the file </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l2 level2 lfo3;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>integer :: unit - the unit
+number of the file if you need to specify it, or -1 if you don't care. </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l2 level2 lfo3;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) :: docName -
+the name of the document, to be displayed in Google Earth (if absent, WKML
+output will be used) </span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New"'>kmlFinishFile
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>! This closes an open KML file and ensures
+all tags are closed. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>Structuring KML <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>If multiple objects are in the same KML
+file, they can be structured by placing them in different folders - these are
+analogous to folders in the filesystem, and can be nested to arbitrary depth.
+They can also be optionally named. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New"'>kmlOpenFolder
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>! Opens a new folder </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l23 level1 lfo4;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) :: name - the
+name of the folder </span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New"'>kmlCloseFolder
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>! Close a folder. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_WKML_API:_Geometry"></a><span lang=EN-US>WKML API: Geometry</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>This is part of the WkmlApi documentation,
+and describes the API calls provided by WKML to produce geometrical objects in
+KML. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>There are five calls: </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l23 level1 lfo4;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Courier New"'>kmlCreatePoints
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l23 level1 lfo4;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Courier New"'>kmlCreateLine
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l23 level1 lfo4;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Courier New"'>kmlStartRegion
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l23 level1 lfo4;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Courier New"'>kmlAddInnerBoundary
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l23 level1 lfo4;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Courier New"'>kmlEndRegion
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>Geometry <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>API calls to produce geometric objects. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Each of these calls requires that a list of
+points be passed in, which may represent points, or vertices on a path, or
+edges of a region. In any case, it is necessary to specify longitude and
+latitude for each point, and optionally, altitude. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>The list of points may be provided in
+several ways: (in each case, longitude &amp; latitude are given in degrees, and
+altitude in metres). </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>1. Two separate rank-one arrays, longitude
+and latitude, and optional rank-one array altitude. If only a single point is
+being output, then longitude, latitude, and altitude may also be given as
+simply individual numbers. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>2. A single rank-two 2xN array, coords,
+containing first row longitude, second row latitude, and an optional rank-one
+array, altitude. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>3. A single rank-two 3xN array, coords,
+containing first row longitude, second row latitude, and third row altitude. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>In every case, the numbers may be provided
+as single or double precision, so long as all numbers in the same call are of
+the same precision. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>individual points<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>A single function, </span><span lang=EN-US
+style='font-family:"Courier New"'>kmlCreatePoints</span><span lang=EN-US>
+accepts various combinations of arguments, and will generate a series of
+individual points to be visualized in Google Earth. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'><span lang=EN-US>In fact, the KML produced will consist of a Folder,
+containing Placemarks, one for each point.<span style='mso-spacerun:yes'>&nbsp;
+</span><o:p></o:p></span></i></b></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>The list of points may be provided as
+specified above. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>If altitude is specified, then the
+following options apply: </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l6 level1 lfo13;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>logical :: extrude: If altitude
+is non-zero, should the point be connected to the ground? </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l6 level1 lfo13;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>logical :: altitudeMode: If
+altitude is specified, is it relativeToGround or absolute? </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>In addition, the styling of the points may
+be adjusted using optional arguments: </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l13 level1 lfo14;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) :: name: A
+name can be assigned to the collection of points </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l13 level1 lfo14;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) :: color: A
+free-text name for the colour of the points (eg red). See
+WkmlApiColourHandling. </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l13 level1 lfo14;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>real :: scale: The size of the
+icon over the point. 1.0 is unscaled, but the icon may be grown or shrunk (this
+may be a single or double precision number, as long as it is consonant with the
+precision of the coordinates provided.) </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l13 level1 lfo14;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) ::
+description(:): An array of strings, one for each point, which describe them. </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l13 level1 lfo14;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>real :: description_numbers(:):
+An array of numbers, which will be converted to strings and used as
+description. (these may be a single or double precision numbers, as long as
+they are consonant with the precision of the coordinates provided.) </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l13 level1 lfo14;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) :: styleURL:
+Instead of specifying colour and scale above, reference may be made to a URL
+which specifies a style elsewhere. This allows much greater control over
+styling - see WkmlApiStyling, and the KML documentation for further details. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>describing a path<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>A single function, </span><span lang=EN-US
+style='font-family:"Courier New"'>kmlCreateLine</span><span lang=EN-US> accepts
+various combinations of arguments, and will generate a series of individual
+points to be visualized as a (closed or open) path in Google Earth. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'><span lang=EN-US>In fact, the KML produced will consist of a
+LineString, or LinearRing, containing a list of coordinates.<span
+style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></i></b></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>The list of points may be provided as
+specified above. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Furthermore, a single logical argument: </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l4 level1 lfo15;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>logical :: closed: determines
+whether the line produced is closed (ie a line is drawn from the first to final
+point, completing a polygon) or open. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>With regards to altitude, the following
+options apply: </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l4 level1 lfo15;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>logical :: extrude: If altitude
+is non-zero, should the point be connected to the ground? </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l4 level1 lfo15;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>logical :: altitudeMode: If
+altitude is specified, is it relativeToGround or absolute? </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l4 level1 lfo15;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>logical :: tessellate: If
+altitude is *not* specified, should the line produced follow the altitude of
+the ground below it? </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>In addition, the styling of the points may
+be adjusted using optional arguments: </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l18 level1 lfo16;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) :: name: A
+name can be assigned to the line. </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l18 level1 lfo16;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) :: color: A
+free-text name for the colour of the points (eg red). See WkmlApiColourHandling.
+</span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l18 level1 lfo16;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>integer :: width: The width of
+the line drawn, in pixels. </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l18 level1 lfo16;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) ::
+description: An single string, used to describe the line, </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l18 level1 lfo16;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) :: styleURL:
+Instead of specifying colour and width above, reference may be made to a URL
+which specifies a style elsewhere. This allows much greater control over
+styling - see WkmlApiStyling below, and the KML documentation for further
+details. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>describing a region <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>Three functions, </span><span lang=EN-US
+style='font-family:"Courier New"'>kmlStartRegion</span><span lang=EN-US>, </span><span
+lang=EN-US style='font-family:"Courier New"'>kmlAddInnerBoundary</span><span
+lang=EN-US>, </span><span lang=EN-US style='font-family:"Courier New"'>kmlEndRegion</span><span
+lang=EN-US>, accept various combinations of arguments, and will generate KML to
+describe a region (with one outer, and multiple inner, boundaries). </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>An initial call to </span><span lang=EN-US
+style='font-family:"Courier New"'>kmlStartRegion</span><span lang=EN-US>
+accepts a list of points describing the outer boundary of the region. Further
+calls to </span><span lang=EN-US style='font-family:"Courier New"'>kmlAddInnerBoundary</span><span
+lang=EN-US> accept series of points describing internal areas which are to be
+excluded from the region, and finally a single call to </span><span lang=EN-US
+style='font-family:"Courier New"'>kmlEndRegion</span><span lang=EN-US> (with no
+list of points) terminates the specification of the region. (In case the region
+has no excluded inner areas, the calls to </span><span lang=EN-US
+style='font-family:"Courier New"'>kmlAddInnerBoundary</span><span lang=EN-US>
+may be omitted. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'><span lang=EN-US>In fact, the KML produced will consist of a Polygon,
+containing one outerBoundaryIs, and multiple optional innerBoundaryIs<span
+style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></i></b></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>The list of points may be provided to </span><span
+lang=EN-US style='font-family:"Courier New"'>kmlStartRegion</span><span
+lang=EN-US> and </span><span lang=EN-US style='font-family:"Courier New"'>klmAddInnerBoundary</span><span
+lang=EN-US> as specified above. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Furthermore, </span><span lang=EN-US
+style='font-family:"Courier New"'>kmlStartRegion</span><span lang=EN-US> takes
+the following additional optional arguments. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>With regards to altitude, the following
+options apply: </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l7 level1 lfo17;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>logical :: extrude: If altitude
+is non-zero, should the point be connected to the ground? </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l7 level1 lfo17;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>logical :: altitudeMode: If
+altitude is specified, is it relativeToGround or absolute? </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l7 level1 lfo17;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>logical :: tessellate: If
+altitude is *not* specified, should the line produced follow the altitude of
+the ground below it? </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>In addition, the styling of the points may be
+adjusted using optional arguments: </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l8 level1 lfo18;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) :: name: A
+name can be assigned to the line. </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l8 level1 lfo18;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) :: linecolor:
+A free-text name for the colour of the line outlining the region. See
+WkmlApiColourHandling. </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l8 level1 lfo18;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) :: fillcolor:
+A free-text name for the colour to fill the region with. See
+WkmlApiColourHandling. </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l8 level1 lfo18;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>integer :: width: The width of
+the line drawn outlining the region, in pixels. </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l8 level1 lfo18;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) ::
+description: An single string, used to describe the region. </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l8 level1 lfo18;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) :: styleURL:
+Instead of specifying colour and width above, reference may be made to a URL
+which specifies a style elsewhere. This allows much greater control over
+styling - see WkmlApiStyling, and the KML documentation for further details.</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_WKML_API:_2-D"></a><span lang=EN-US>WKML API: 2-D Visualization</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>This part of the WkmlApi documentation
+describes the WKML API available for visualizing two-dimensional fields of
+data. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>Coordinates<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>The coordinates used in those API assumes
+that the center of the grid cell is where the coordinate is. For example,
+according to the following figure, there are 9 X 9 grid cells in X and Y
+direction. The number of longitude and latitude will be as the same size as
+field data. That will be 9 X 9.<span style='mso-spacerun:yes'>&nbsp; </span></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>. <!--[if gte vml 1]><v:shape
+ id="_x0000_i1025" type="#_x0000_t75" style='width:235.5pt;height:235.5pt'>
+ <v:imagedata src="WKML05122008.files/image007.jpg" o:title="coordinates"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=314 height=314
+src="WKML05122008.files/image008.jpg" v:shapes="_x0000_i1025"><![endif]></span></p>
+
+<p class=MsoNormal><span lang=EN-US>However, in some applications, the number
+of coordinates will be (number of grid cells on X direction +1) X (number of
+grid cells on Y direction +1). According to the above figure, the coordinate
+located at red dot positions. Thus, the number of coordinates will be 10 X 10. </span><span
+lang=EN-US style='font-family:"Courier New"'>kmlCreateCells3</span><span
+lang=EN-US> is used for this situation. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>Illustrating 2-D fields<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>A common requirement in the geosciences is
+to visualize a two-dimensional field, for example to see the variation in
+sea-surface-temperature across some area, or the variation in reflectance
+across a landscape. In such cases, the input data is a collection of
+geographically-distributed values. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>The output can either be a series of
+coloured cells, centred at each data point, and coloured according to the value
+of the data; or it can be a set of isocontours. WKML will do either (The latter
+is sometimes more attractive, though sometimes less accurate. It almost always
+results in significantly smaller KML file output.) </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>These input data may be gridded or
+ungridded; however WKML only deals with gridded data. Ungridded data must be
+interpolated first; such interpolation is a complex, and often domain-specific
+task. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>If the data is available on a topologically
+rectilinear grid, regardless of its alignment or regularity then WKML can
+display it. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>A simple masking function may be used to
+exclude unwanted regions: </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l19 level1 lfo19;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>real :: mask: A
+&quot;masking&quot; value - any area on the grid with value greater than this
+is not included in the output - this is useful, for example, in excluding
+landmasses from a visualization of sea data. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>Data input <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>For all 2-D field functions, the data must
+be specified, as must the grid points on which the data lies. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>The data must always be specified as a
+rank-2 array, values(:,:) </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>The grid can be specified in three ways
+depending on grid type. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>1. Regular rectangular grid: Specify north,
+south, east, west. These specify the four corners of the grid (which must be
+aligned with lines of longitude and latitude). </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>2. Irregularly spaced rectangular grid.
+Specify two rank-one arrays, longitude(:) and latitude(:). The grid must be
+aligned with lines of longitude and latitude. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Grid-point (i, j) = (longitude(i),
+latitude(j)). </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>3. Entirely irregular (topologically
+rectangular) grid. Specify two rank-two arrays, longitude(:,:) and
+latitude(:,:). The grid may be of any form, aligned with no other projection,. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Grid-point (i, j) is taken as (longitude(i,
+j), latitude(i, j)) </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>In all cases, single or double precision
+data may be used so long as all data is consistent in precision within one
+call. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>Control over the third dimension<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>The third dimension of the data can be
+visualized in two (not mutually-exclusive) ways; firstly by assigning colours
+according to the value of the tird dimension, and secondly by using the
+altitude of the points as a (suitable scaled) proxy for the third dimension.
+The following optional arguments control this aspect of the visualization (both
+for cells and for contours) </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l19 level1 lfo19;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>type(color) :: colormap(:): an
+array of colours (see WkmlApiColourHandling) which will be used for painting
+the various layers </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l19 level1 lfo19;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>real, contour_values(:): an
+array of values which will be used to divide each layer of the third dimension.
+Single/double precision according to context. </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l19 level1 lfo19;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>integer :: num_values: where
+contour_values is not specified, this provides that the range of the values by
+divided into equal sized layers such that there are this many divisors. </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l19 level1 lfo19;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>real :: height: where this is
+specified, the generated visualization will vary in height as well as colour.
+The value of this variable will be used to as a multiplicative prefactor to
+scale the data before visualization. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Where no colormap is provided, one will be
+autogenerated with the appropriate number of levels as calculated from the
+provided contour_values. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Where no contour_values are provided, they
+are calculated based on the size of the colormap provided. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Where neither colormap nor contour_values
+are provided, a default of 5 levels with an autogenerated colormap will be
+used. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>Visualizing coloured cells<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>A 2-D field may be visualized as a
+collection of cells, coloured according to the value of the data at each grid
+point. A single function exists to do this, </span><span lang=EN-US
+style='font-family:"Courier New"'>kmlCreateCells</span><span lang=EN-US>. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>This function takes a grid,data, and
+optional mask as specified above, the third dimension may be controlled as
+described, and in addition, the following optional argument: </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l16 level1 lfo20;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>name :: name to associate with
+the output contours </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>Visualizing isocontours<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>A 2-D field may be visualized by drawing
+contours of equal value, and by colouring the areas between the contours
+according to the value of the data they contain. This is done by the single
+subroutine kmlCreateContours. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>This function takes grid and data as
+specified above, and in addition, the following optional arguments: </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l16 level1 lfo20;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>name :: name to associate with
+the output contours </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l16 level1 lfo20;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>logical :: lines: should the
+contour lines be drawn or not? </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l16 level1 lfo20;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>logical :: regions: should the
+regions between contours be coloured in or not?</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_WKML_API:_Colour"></a><span lang=EN-US>WKML API: Colour handline</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>This part of the WkmlApi documentation
+describes the WKML API for manipulating colours in KML. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>Colour Handing<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>KML natively handles all colours as 32-bit
+values, expressed as 8-digit hexadecimal numbers in ABGR (alpha-blue-green-red)
+channel order. However, this isn't very friendly. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>WKML provides a nicer interface to this,
+and all WKML functions which accept colour arguments will accept them in three
+ways: </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>Colour arguments<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l0 level1 lfo21;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=8) :: colorhex:
+an 8-digit hex number as described above. This *will* be checked for
+correctness. </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l0 level1 lfo21;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>character(len=*) :: colorname:
+a free-text string describing a colour. WKML understands any of the
+approximately 700 colour names used by X11 (see, for example, this listing, so
+will work with any common colour name, and a lot of others. </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l0 level1 lfo21;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>type(color) :: color :: WKML
+includes an opaque colour type, which is used for generating lists of colours
+for those functions which require colourmaps (the contouring and
+cell-generation functions). This can be populated and manipulated by the
+functions described below. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt'>Colour maps<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>The contouring and cell-parameter functions
+require the provision of colourmaps - _ie_ lists of colours - for illustrating
+features correctly. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Colourmaps are simply arrays of colour
+objects like so: </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'>type(color) ::
+colourmap(10) <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=FR
+style='font-size:14.0pt;mso-ansi-language:FR'>Colour manipulation<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>A colourmap may be populated (as indeed may
+be any color object) by these functions: </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l5 level1 lfo22;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Courier New"'>kmlGetCustomColor</span><span
+lang=EN-US> This will accept either an integer, i, (which will choose the ith
+colour from the X11 list) or a string, name, which will choose the colour of
+that name. </span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l5 level1 lfo22;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings'><span
+style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"Courier New"'>kmlSetCustomColor</span><span
+lang=EN-US> This will accept an 8-digit hexadecimal number, and set the colour
+appropriately. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>These may be used like so: </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>colormap(1) = </span><span lang=EN-US
+style='font-family:"Courier New"'>kmlGetCustomColor</span><span lang=EN-US>(&quot;indian
+red&quot;) </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>will set the first colour of the colourmap
+to be &quot;indian red&quot; </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>colormap(2) = </span><span lang=EN-US
+style='font-family:"Courier New"'>kmlGetCustomColor</span><span lang=EN-US>(53)
+</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>will set the first colour of the colourmap
+to be the 53rd X11 colour. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>call </span><span lang=EN-US
+style='font-family:"Courier New"'>setCustomColor</span><span lang=EN-US>(colormap(23),
+&quot;045b<st1:chmetcnv TCSC="0" NumberType="1" Negative="False"
+HasSpace="False" SourceValue="3" UnitName="a" w:st="on">3a</st1:chmetcnv>9d&quot;)
+</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>will set the third colour of the colour map
+to the ABRG value &quot;045b<st1:chmetcnv TCSC="0" NumberType="1"
+Negative="False" HasSpace="False" SourceValue="3" UnitName="a" w:st="on">3a</st1:chmetcnv>9d&quot;.
+</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_WKML_API:_Styling"></a><span lang=EN style='mso-ansi-language:
+EN'>WKML API: Styling<o:p></o:p></span></h2>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'>This is part of
+the WkmlApi documentation, and describes the API provided by WKML to control
+KML styling. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'>KML styles may be
+quite complex, and the interested reader should read the KML documentation for
+details unexplained below. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'>There are three
+relevant WKML calls: <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l15 level1 lfo23;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='font-family:"Courier New";
+mso-ansi-language:EN'>kmlCreatePointStyle <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l15 level1 lfo23;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='font-family:"Courier New";
+mso-ansi-language:EN'>kmlCreateLineStyle <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l15 level1 lfo23;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='font-family:"Courier New";
+mso-ansi-language:EN'>kmlCreatePolygonStyle <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='font-size:16.0pt;mso-ansi-language:EN'>Styling<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'>Most of the
+higher level WKML subroutines allow some control over the styling of the
+visualization output, however they do not provide access to the full vocabulary
+of KML, which allows more complex styling. In order to access these more complex
+styles, it is necessary to use KML style maps - which is to say that a style
+must first be defined, and then references to it made through a styleURL. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'>Styles can be
+created using the following subroutines. In each case one argument is
+necessary: id`, which must be a string (starting with an alphabetic letter, and
+containing no spaces or punctuation marks) which is used later on to reference
+the style. All other arguments are optional. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='font-size:14.0pt;mso-ansi-language:EN'>styling individual points<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'>kmlCreatePointStyle
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l20 level1 lfo24;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>real(sp)
+:: scale: size of the icon for the point - 1.0 is unscaled, but the icon can be
+grown or shrunk. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l20 level1 lfo24;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>type(color)
+:: color: A colour object (see Colour Handling below) with which the icon will
+be coloured. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l20 level1 lfo24;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>character(len=*)
+:: colorname: A free-text colour name (eg red) describing the colour of the
+icon (see WkmlApiColourHandling) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l20 level1 lfo24;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>character(len=8)
+:: colorhex: A length-8 string, which must be a valid hexadecimal number,
+describing the colour in ABGR order. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l20 level1 lfo24;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>character(len=6)
+:: colormode: A string, either normal or random - if random, the colour will be
+randomly changed (though will remain close in spectral space to the specified
+colour - see KML documentation for details). <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l20 level1 lfo24;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>integer
+:: heading: An integer (between -180 and 180) describing the orientation of the
+icon in degrees. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l20 level1 lfo24;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>character(len=*)
+:: iconhref: A url, or filepath, pointing to an icon to be used to illustrate
+the point. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='font-size:14.0pt;mso-ansi-language:EN'>styling a line<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'>kmlCreateLineStyle
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l21 level1 lfo25;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>integer
+:: width: width of the line to be drawn (in pixels). <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l21 level1 lfo25;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>type(color)
+:: color: A colour object (see Colour Handling below) with which the icon will
+be coloured. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l21 level1 lfo25;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>character(len=*)
+:: colorname: A free-text colour name (eg red) describing the colour of the
+icon (see WkmlApiColourHandling) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l21 level1 lfo25;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>character(len=8)
+:: colorhex: A length-8 string, which must be a valid hexadecimal number,
+describing the colour in ABGR order. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l21 level1 lfo25;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>character(len=6)
+:: colormode: A string, either normal or random - if random, the colour will be
+randomly changed (though will remain close in spectral space to the specified
+colour - see KML documentation for details). <o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN
+style='font-size:14.0pt;mso-ansi-language:EN'>styling a polygon <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'>kmlCreatePolygonStyle
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l25 level1 lfo26;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>type(color)
+:: color: A colour object (see Colour Handling below) with which the icon will
+be coloured. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l25 level1 lfo26;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>character(len=*)
+:: colorname: A free-text colour name (eg red) describing the colour of the
+icon (see WkmlApiColourHandling) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l25 level1 lfo26;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>character(len=8)
+:: colorhex: A length-8 string, which must be a valid hexadecimal number,
+describing the colour in ABGR order. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l25 level1 lfo26;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>character(len=6)
+:: colormode: A string, either normal or random - if random, the colour will be
+randomly changed (though will remain close in spectral space to the specified
+colour - see KML documentation for details). <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l25 level1 lfo26;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>logical
+:: fill: Should the inside of the polygon be filled with colour or transparent?
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt;mso-list:l25 level1 lfo26;
+tab-stops:list 24.0pt'><![if !supportLists]><span lang=EN style='font-family:
+Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+mso-ansi-language:EN'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN style='mso-ansi-language:EN'>logical
+:: outline: Should the outline of the polygon be drawn?<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN style='mso-ansi-language:EN'><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_WKMLChart"></a><span lang=EN style='mso-ansi-language:EN'>WKMLChart<o:p></o:p></span></h2>
+
+<p class=MsoNormal><span lang=EN-GB style='mso-ansi-language:EN-GB'>Although </span><span
+lang=EN-US>GE is good at representing geographic data, it is not </span><span
+lang=EN-GB style='mso-ansi-language:EN-GB'>so </span><span lang=EN-US>good at
+displaying statistics data. It </span><span lang=EN-GB style='mso-ansi-language:
+EN-GB'>would</span><span lang=EN-US> be useful </span><span lang=EN-GB
+style='mso-ansi-language:EN-GB'>for</span><span lang=EN-US> KML and GE </span><span
+lang=EN-GB style='mso-ansi-language:EN-GB'>to be able to</span><span
+lang=EN-US> display the graphs and other variables along with their
+geographical objects in a single visualization environment. Users </span><span
+lang=EN-GB style='mso-ansi-language:EN-GB'>could then</span><span lang=EN-US>
+simply click the placemark to see the graphs. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Google released a Google Chart API at the
+beginning of 2008 and this API can potentially be integrated in KML. Basically,
+the Google Chart API needs a server URL including values for several variables
+such as chart size, chart data, and chart type. An example of the usage of
+Google Chart API is shown below.</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:6.0pt;mso-char-indent-count:.5'><!--[if gte vml 1]><v:rect
+ id="_x0000_s1030" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:414pt;height:27pt;z-index:3' fillcolor="silver">
+ <v:fill opacity="6554f"/>
+</v:rect><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:3'><span style='left:0px;position:absolute;left:-1px;
+top:-1px;width:554px;height:38px'><img width=554 height=38
+src="WKML05122008.files/image009.gif" v:shapes="_x0000_s1030"></span></span><![endif]><span
+lang=EN-US>http://chart.apis.google.com/chart?cht=lt&amp;chd=t:60,40&amp;chs=250x100<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Functions in </span><span lang=EN-US
+style='font-family:"Courier New"'>m_wkml_chart</span><span lang=EN-US> module
+used to add charts in KML files. One can simply call the subroutine </span><span
+lang=EN-US style='font-family:"Courier New"'>kmlAddChart</span><span
+lang=EN-US> and provide the required information such as chart type, chart
+data, chart scale to plot the chart. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>There are several issues about this
+approach that merit comment. First, it passes all the data into the </span><span
+lang=EN-US style='font-family:"Courier New"'>&lt;description&gt;</span><span
+lang=EN-US> element of KML. Fortran has its size limitation of about 1024
+characters depending on the compiler, for a single line. This limitation means
+only about 100 data values can be inserted in the tag. The Google Chart API also
+has its own limitation. At this moment, it only supports 2047 characters. Thus,
+</span><span lang=EN-US style='font-family:"Courier New"'>kmlAddChart </span><span
+lang=EN-US>has limitations in terms of the representation of data. Users have
+to decide the granularity of the chart. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New"'>kmlAddChart
+</span><span lang=EN-US>used internally. It only inserts the information into </span><span
+lang=EN-US style='font-family:"Courier New"'>&lt;description&gt;</span><span
+lang=EN-US> for Goolgle Chart API. kmlAddChart itself does not include the
+geographic information along with a placemark. </span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>Users can use </span><span lang=EN-US
+style='font-family:"Courier New"'>kmlAddChart</span><span lang=EN-US> along
+with other WKML lower level functions. However, the easiest way to use it is
+using </span><span lang=EN-US style='font-family:"Courier New"'>kmlCreatePoints</span><span
+lang=EN-US> which </span><span lang=EN-US style='font-family:"Courier New"'>kmlAddChart</span><span
+lang=EN-US> arguments are passed as optional arguments. At this moment, the
+data type of all the </span><span lang=EN-US style='font-family:"Courier New"'>kmlAddChart</span><span
+lang=EN-US> arguments are strings. An example usage is shown below:</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:4.5pt;mso-char-indent-count:.5'><!--[if gte vml 1]><v:rect
+ id="_x0000_s1031" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:414pt;height:153pt;z-index:4' fillcolor="silver">
+ <v:fill opacity="13107f"/>
+</v:rect><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:4'><span style='left:0px;position:absolute;left:-1px;
+top:-1px;width:554px;height:206px'><img width=554 height=206
+src="WKML05122008.files/image006.gif" v:shapes="_x0000_s1031"></span></span><![endif]><span
+lang=EN-US style='font-size:9.0pt'><span style='mso-spacerun:yes'>&nbsp;&nbsp;
+</span><span style='mso-spacerun:yes'>&nbsp;&nbsp;</span>longitude=-2.531726<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:4.5pt;mso-char-indent-count:.5'><span
+lang=EN-US style='font-size:9.0pt'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>latitude=53.971251<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:4.5pt;mso-char-indent-count:.5'><span
+lang=EN-US style='font-size:9.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:4.5pt;mso-char-indent-count:.5'><span
+lang=EN-US style='font-size:9.0pt'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>charttype=&quot;lc&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:4.5pt;mso-char-indent-count:.5'><span
+lang=EN-US style='font-size:9.0pt'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>chartsize=&quot;600x300&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:4.5pt;mso-char-indent-count:.5'><span
+lang=EN-US style='font-size:9.0pt'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>chartscale=&quot;0,1.5&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:4.5pt;mso-char-indent-count:.5'><span
+lang=EN-US style='font-size:9.0pt'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>charttitle=&quot;Discharge+of+Dunsop&quot;call kmlCreatePoints(myfile, longitude,
+latitude, charttype=charttype,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:4.5pt;mso-char-indent-count:.5'><span
+lang=EN-US style='font-size:9.0pt'>chartsize=chartsize, chartdata=ovr_flow, chartscale=chartscale,
+charttitle=charttitle)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:369pt;height:286.5pt'>
+ <v:imagedata src="WKML05122008.files/image010.jpg" o:title="chart"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=492 height=382
+src="WKML05122008.files/image011.jpg" v:shapes="_x0000_i1026"><![endif]></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt'><span lang=EN-US
+style='font-size:9.0pt'>A hydrograph generated by </span><span lang=EN-US
+style='font-size:9.0pt;font-family:"Courier New"'>kmlCreatePoints</span><span
+lang=EN-US style='font-size:9.0pt'> using </span><span lang=EN-US
+style='font-size:9.0pt;font-family:"Courier New"'>kmlAddChart</span><span
+lang=EN-US style='font-size:9.0pt'> shows the simulation results which is the discharge
+of the Dunsop catchment in <st1:place w:st="on"><st1:City w:st="on">Lancashire</st1:City>,
+ <st1:country-region w:st="on">UK</st1:country-region></st1:place>.<o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
