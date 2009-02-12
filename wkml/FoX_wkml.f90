@@ -56,7 +56,7 @@ module FoX_wkml
 ! add by GT 10/03/2008
   public :: kmlCreateCells3
 
-! add chart function 22042008 (need to remove later)
+! add chart function 22042008 (need to remove later, this hacked the wxml)
   public :: kmlAddChart
 
 end module FoX_wkml
