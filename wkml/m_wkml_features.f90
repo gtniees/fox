@@ -32,11 +32,11 @@ module m_wkml_features
   end interface kmlAddPoint
 
   interface kmlCreatePoints
-    module procedure kmlCreatePoints_0d_sp
+    module procedure kmlCreatePoints_0d_sp !single point
+    module procedure kmlCreatePoints_0d_dp !single point
     module procedure kmlCreatePoints_1d_sp
+    module procedure kmlCreatePoints_1d_dp    
     module procedure kmlCreatePoints_2d_sp
-    module procedure kmlCreatePoints_0d_dp
-    module procedure kmlCreatePoints_1d_dp
     module procedure kmlCreatePoints_2d_dp
   end interface kmlCreatePoints
 
@@ -150,6 +150,7 @@ contains
     integer :: k
     real(sp), intent(in), optional :: values(:)
 
+     print*,'run kmlCreatePoints_0d_sp'
 
     ! Need to check presence explicitly since we mutate altitude with (//)
     if (present(altitude)) then
@@ -171,6 +172,8 @@ contains
         dataname=dataname,values=values)
     endif
   end subroutine kmlCreatePoints_0d_sp
+
+
 
 ! Interface 1: separate long & lat arrays, optional altitude
   subroutine kmlCreatePoints_1d_sp(xf, longitude, latitude, altitude, &
@@ -205,6 +208,7 @@ contains
     integer :: k
     real(sp), intent(in), optional :: values(:)
 
+   print*,'kmlCreatePoints_1d_sp'
 
     n = size(longitude)
     if (n/=size(latitude)) then
@@ -250,8 +254,8 @@ contains
 
 ! add by GT 24042008 for adding chart functions
       if (present(charttype).and.present(chartsize).and.present(chartdata)&
-.and.present(chartscale).and.present(charttitle).and.present(chartlabel)) then
-        call kmlAddChart(xf,charttype,chartsize,chartdata,chartscale,&
+         .and.present(chartscale).and.present(charttitle)) then
+        call kmlAddChart_sp(xf,charttype,chartsize,chartdata,chartscale,&
         charttitle,chartlabel)
       end if
 
@@ -431,6 +435,8 @@ contains
     integer :: k
     real(dp), intent(in), optional :: values(:)
 
+    print*,'run kmlCreatePoints_1d_dp'
+
     n = size(longitude)
     if (n/=size(latitude)) then
       print*, "Incommensurate sizes for longitude and latitude arrays in kmlCreatePoints"
@@ -475,7 +481,7 @@ contains
 ! add by GT 24042008 for adding chart functions
       if (present(charttype).and.present(chartsize).and.present(chartdata)&
 .and.present(chartscale).and.present(charttitle)) then
-        call kmlAddChart(xf,charttype,chartsize,chartdata,chartscale,charttitle,chartlabel)
+        call kmlAddChart_dp(xf,charttype,chartsize,chartdata,chartscale,charttitle,chartlabel)
       end if
 
     ! adding time funtion by GT 17102007
@@ -965,7 +971,7 @@ name,linewidth,description_ch,styleURL)
     integer, intent(in), optional :: linewidth
     character(len=*), intent(in), optional :: description
     character(len=*), intent(in), optional :: styleURL
-    
+   
     if (size(coords,1)==2) then
       call kmlStartRegion(xf, coords(1,:), coords(2,:), altitude, &
         extrude=extrude, tessellate=tessellate, altitudeMode=altitudeMode, &
@@ -1014,7 +1020,10 @@ name,linewidth,description_ch,styleURL)
     integer :: n
     logical :: needPlacemark, outline, fill
 
+    !print *,' kmlStartPolygon_1d_dp'
+
     n = size(longitude)
+
     outline = present(linecolor).or.present(linecolorname).or.present(linecolorhex).or.present(linewidth)
     fill = present(fillcolor).or.present(fillcolorname).or.present(fillcolorhex)
 
@@ -1063,13 +1072,15 @@ name,linewidth,description_ch,styleURL)
     integer, intent(in), optional :: linewidth
     character(len=*), intent(in), optional :: description
     character(len=*), intent(in), optional :: styleURL
-    
+   
+ 
     if (size(coords,1)==2) then
       call kmlStartRegion(xf, coords(1,:), coords(2,:), altitude, &
         extrude=extrude, tessellate=tessellate, altitudeMode=altitudeMode, &
         name=name, fillcolor=fillcolor, fillcolorname=fillcolorname, fillcolorhex=fillcolorhex, &
         linecolor=linecolor, linecolorname=linecolorname, linecolorhex=linecolorhex, &
         linewidth=linewidth, description=description, styleURL=styleURL)
+
     elseif (size(coords,1)==3) then
       if (present(altitude)) then
         print*, "Cannot specify 3-dimensional coords with separate altitude in kmlStartPolygon"

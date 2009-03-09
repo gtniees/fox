@@ -10,7 +10,7 @@ module m_wkml_color
 
   type color
 ! comment out by GT 10/03/2008 remem get it back if it causese problem
-    private
+!    private
     character(len=8) :: hex
   end type color
 

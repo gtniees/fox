@@ -26,6 +26,9 @@ module m_wkml_contours
 !    module procedure kmlCreateContours_longlat_dp
   end interface kmlCreateContours
 
+
+  public :: kmlCreateContours_longlat_sp
+
   public :: kmlCreateContours
 
 contains
@@ -67,6 +70,8 @@ contains
     logical, intent(in), optional :: lines, regions
 
     type(contourObject) :: o
+
+    print*,'run kmlCreateContours_longlat_sp'
 
     o = make_contours_on_a_simple_grid(longitude, latitude, values, contour_values, num_levels, mask)
 

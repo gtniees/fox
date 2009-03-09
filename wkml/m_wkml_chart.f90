@@ -7,12 +7,8 @@ module m_wkml_chart
 
   private
 
-  public :: kmlAddChart
-
-  interface kmlAddChart
-   module procedure kmlAddChart_sp
-   module procedure kmlAddChart_dp
-  end interface kmlAddChart
+  public :: kmlAddChart_sp
+  public :: kmlAddChart_dp
 
 contains
 
@@ -45,15 +41,29 @@ contains
 !"cht="//charttype//"&"//"chs="//chartsize//"&"//"chd=t:"//chartdata//"&"//"chds="//chartscale//&
 !"chxt=x,y"//"chx1="//"0:"//"|Date|"//"1:"//"|Discharge|"//'"/>]]>')
 
-     call xml_AddCharacters(xf,'<img src="http://chart.apis.google.com/chart?'//&
+  call xml_AddCharacters(xf,'<img src="http://chart.apis.google.com/chart?'//&
 "cht="//trim(charttype)//"&"//"chs="//trim(chartsize)//"&"//&
-"chd=t:"//trim(str(chartdata_chr,delimiter=","))&
-//"&"//"chds="//trim(chartscale)//"&"&
+"chd=t:",parsed=.false.)
+! this is to check whether we like the XML keep indent preserve_whitesapce=.true. means indent
+! we do not want this here, just for data section. thus set wxml xf type and remove the private.
+!
+
+! in FoX 4.0.3 preserve_whitesapce=.true not exist anymore, probably need to use pretty_print = .false.
+     print*,"PW", xf%pretty_print
+     xf%pretty_print = .false.
+     call xml_AddNewLine(xf)
+     do i = 1, size(chartdata_chr)-1
+       call xml_AddCharacters(xf,chartdata_chr(i)//",")
+       call xml_AddNewLine(xf)
+     enddo
+     call xml_AddCharacters(xf,chartdata_chr(i))
+     call xml_AddCharacters(xf,"&"//"chds="//trim(chartscale)//"&"&
 //"chtt="//trim(charttitle)//"&"&
 //"chxt=x,y"//"&"&
 !//"chxl=0:|Jan|Feb|March|1:|0|1.0"&
 //"chxl="//trim(chartlabel)//""&
 //'"/>', parsed=.false.)
+     xf%pretty_print = .false.
 
      call xml_EndElement(xf,'description')
 

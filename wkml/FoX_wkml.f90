@@ -33,6 +33,8 @@ module FoX_wkml
 ! contouring function
   public :: kmlCreateContours
 
+  public :: kmlCreateContours_longlat_sp
+
 ! color handling functions and variables
   public :: color  ! make derivded type colorindex available
   public :: kmlGetCustomColor
@@ -56,7 +58,7 @@ module FoX_wkml
 ! add by GT 10/03/2008
   public :: kmlCreateCells3
 
-! add chart function 22042008 (need to remove later, this hacked the wxml)
-  public :: kmlAddChart
+! add chart function 22042008 (need to remove later)
+!  public :: kmlAddChart_dp
 
 end module FoX_wkml

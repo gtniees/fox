@@ -629,6 +629,8 @@ contains
 
     logical :: needStyle
 
+    !print *,' run kmlCreatePolygonStyle'
+
     needStyle = (xmlf_OpenTag(xf)/='Style')
 
     if (needStyle) call kmlOpenStyle(xf,id)
